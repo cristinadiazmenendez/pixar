@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url(../assets/Brandon_med.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url(../assets/Brandon_reg.otf);
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: 'Brandon Grotesque', Arial, sans-serif;
+  font-weight: 500;
+  color: var(--negro);
+  /* opcional */
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.Header{
+    width: 100%;
+    padding: 2.375rem 11.875rem 2.375rem 8.875rem;
+
+    /* background-color: lightblue; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.Header-close{
+  display: none;
+}
+.Logo-img{
+  max-width: 8.0625rem;
+}
+.Header-nav{
+  /* background-color: white; */
+}
+.Header-ul{
+  /* background-color: lightcoral; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+}
+.Header-li{
+
+}
+.Header-item{
+  font-size: .9375rem;
+  letter-spacing: .14rem;
+  text-transform: uppercase;
+}
+.Main{
+  width: 100%;
+
+  
+}
+.Main-hero{
+  min-height: 130vh;
+  position: relative;
+  
+  background-color: lightcoral;
+}
+
+.Hero-background{
+  min-height: 140vh;
+  object-fit: cover;
+
+}
+
+.Hero-elemental{
+  width: 50%;
+  position: absolute;
+  bottom: 15.625rem;
+  left: 25%;
+
+
+}
+
+.Main-news{
+  display: grid;
+  grid-template-columns: repeat( 3 , 1fr);
+  gap: 2.0625rem;
+  margin: 8.875rem 9.375rem;
+}
+.News-columns{
+  text-align: center;
+}
+.News-img{
+  margin: 0 0 2.0625rem;
+}
+
+.News-h3{
+  font-size: .875rem;
+  letter-spacing: .29rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Footer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  margin: 1.25rem 0 2.5rem 0;
+}
+.Footer-Rrss{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: .9375rem;
+
+}
+.Rrss-svg{
+  width: 1.375rem;
+}
+
+.Footer-policy{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 40%;
+  font-weight: 400;
+  font-size: .875rem;
+  letter-spacing: .2313rem;
+  line-height: 20px;
+  gap: 10px;
+}
+.Policy-a{
+  border-bottom: .0625rem solid rgba(29,29,29,.3);
+}
+.Policy-a::after{
+  content: '|';
+}
+.last::after{
+  display: none;
+}
+.Footer-copyright{
+  font-weight: 400;
+  font-size: .875rem;
+  letter-spacing: .1875rem;
+  line-height: 1.7rem;
+}
+.Footer-button{
+  background-color: #efefef;
+  color: #68b631;
+  border: 1px solid #68b631;
+  padding: .875rem 2.1875rem;
+  line-height: 1.3125rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  transition: 0.1 ease all;
+}
+.Footer-button:hover{
+  background-color: #68b631;
+  color: white;
+}
+/* Cuando uso el isActive en el header-nav, el header-ul se sigue viendo
+   Que hay que hacer para bloquear el menu del responsive para que no pueda hacer scroll*/
+@media (max-width: 1229px){
+  .Header{
+    position: relative;
+}
+  .Header-nav{
+    width: 93%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2.25rem;
+  }
+  .Header-ul{
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.618rem;
+  }
+  .Header-item{
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+  }
+  .Header-item::after{
+    content: '\00BB';
+    color: rgba(0,0,0,.4);
+    margin-left: 5px;
+  }
+  .Header-close{
+    color: black;
+    width: 7%;
+    display: block;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.375rem;
+    z-index: 2;
+  }
+  .Main-news{
+    margin: 7.5rem 3rem;
+
+  }
+}
+
+@media (max-width: 640px){
+  .Main-hero{
+    margin-bottom: 3.75rem;
+  }
+  .Main-news{
+    grid-template-columns: 1fr;
+    margin: 1.0625rem;
+  }
+
+  .Rrss{
+    padding: 5rem 0;
+  }
+
+  .Policy{
+    margin: 1.0625rem;
+    width: 95%;
+  }
+}
+
